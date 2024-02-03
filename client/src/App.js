@@ -1,11 +1,15 @@
 // import logo from './logo.svg';
 import './App.css';
 
-import Posts from './Posts'; 
+import PostsCreate from './components/PostsCreate';
+import PostsShow from './components/PostsShow';
 
 function App() {
   return (
-    <Posts/>
+    <div className="container mt-2 mb-2">
+      <PostsCreate />
+      <PostsShow />
+    </div>
   );
 }
 

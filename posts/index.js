@@ -28,4 +28,4 @@ app.post('/posts', (req, res) => {
 
 app.listen(port, () => {
     console.log('Posts Service Listening on '+port);
-})
+});

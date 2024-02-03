@@ -1,22 +1,21 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
-function Posts() {
+function PostsCreate() {
     const [title, setTitle] = useState();
 
     const onSubmit = async event => {
         event.preventDefault();
 
-        await axios.post('http://localhost:4000/posts', {
+        var res = await axios.post('http://127.0.0.1:4000/posts', {
             title
         });
-
-        setTitle('');
+        
+        window.location.href = '.';
     }
 
     return (
-        <div className="container">
             <form onSubmit={onSubmit}>
                 <div className="form-group">
                     <label>Title</label>
@@ -26,10 +25,10 @@ function Posts() {
                         className="form-control"
                     />
                 </div>
-                <button className="btn btn-primary">Submit</button>
+                <button className="btn btn-primary mt-2">Submit</button>
             </form>
-        </div>
     );
 };
 
-export default Posts;
+export default PostsCreate;
+
