@@ -12,6 +12,7 @@ app.use(cors());
 const port = 4000;
 const posts = {};
 
+
 app.get('/posts', (req, res) => {
     res.send(posts);
 });

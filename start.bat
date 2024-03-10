@@ -4,4 +4,5 @@ start comments.bat
 start client.bat
 start event-bus.bat
 start query.bat
+start moderation.bat
 exit

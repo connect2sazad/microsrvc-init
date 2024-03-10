@@ -9,7 +9,8 @@ function PostsShow() {
     const [posts, setPosts] = useState({});
 
     const getPosts = async () => {
-        const res = await axios.get('http://127.0.0.1:4000/posts/');
+        const res = await axios.get('http://127.0.0.1:4002/posts/');
+        // console.log(res.data);
         setPosts(res.data);
     }
 
@@ -23,7 +24,7 @@ function PostsShow() {
         return (
             <div className="card bg-secondary m-2 p-2 text-white" style={{width: '30%'}} key={post.id}>
                 <h3>{post.title}</h3>
-                <CommentsShow postId={post.id}/>
+                <CommentsShow comments={post.comments}/>
                 <CommentsCreate postId={post.id}/>
             </div>
         );
