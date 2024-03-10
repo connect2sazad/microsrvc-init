@@ -1,0 +1,8 @@
+Service Name        |       Port
+--------------------------------------
+Client              |       300 0
+Post                |       400 0
+Comments            |       400 1
+Query               |       400 2
+Moderation          |       400 3
+Event Bus           |       400 5

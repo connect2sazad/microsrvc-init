@@ -14,7 +14,7 @@ const commentsByPostId = {};
 
 app.get('/posts/:id/comments', (req, res) => {
     res.send(commentsByPostId[req.params.id] || []);
-});
+}); 
 
 app.post('/posts/:id/comments', async (req, res) => {
     const cid = randomBytes(4).toString('hex');
@@ -35,6 +35,8 @@ app.post('/posts/:id/comments', async (req, res) => {
             status: 'pending'
         }
     });
+
+    console.log(comments);
 
     res.status(201).send(comments);
 });
